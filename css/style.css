@@ -1,0 +1,180 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+*{
+  box-sizing: border-box;
+  /* border: 1px solid red; */
+  width: 100%;
+  text-align: center;
+  
+
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+header {
+  position: absolute;
+  top: 0;
+  display: flex;
+  width: 100%;
+  height: 5rem;
+  background-color: rgb(171,0,0);
+  justify-content: flex-end;
+  font-family: 'MedievalSharp', cursive;
+
+}
+
+main {
+  padding: 0 5%;
+  line-height: 1.3rem;
+
+}
+
+#intro {
+  line-height: 2rem;
+}
+
+nav {
+display: flex;
+width: 100%;
+justify-content: flex-start;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0 5%;
+}
+
+nav li {
+  display: inline;
+  margin: 0 2rem;
+}
+
+nav a {
+  font-size: 2em;
+  line-height: 3rem;
+  text-decoration: none;
+  color: white;
+}
+
+nav a:hover{
+  color: black;
+}
+
+@media screen and (max-width: 800px){
+  nav li {
+    margin: 0 .5rem;
+  }
+  nav a {
+    font-size: 1.3rem;
+    line-height: 3rem;
+  }
+  #place {
+    width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 430px){
+  nav li {
+    margin: 0 .2rem;
+  }
+  nav a {
+    font-size: 1.1em;
+    line-height: 3rem;
+  }
+  nav ul {
+    list-style-type: none;
+    padding: 0 2%;
+  }
+  #place img{
+    width: 60%;
+    height: 18rem !important;
+    margin: 5rem auto;
+  }
+}
+
+body {
+  margin-top: 10rem;
+  background-color: rgb(231,231,218);
+}
+
+#classesList {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+#classesList li{
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+/* li div:hover{
+  background-color: black;
+} */
+
+#place {
+  background-color: rgb(157, 132, 32, 0.3);
+  padding: 2rem;
+  display: none;
+  margin: 0 auto 2rem auto;
+  width: 60%;
+}
+
+#place h1{
+  line-height: 2.2rem;
+}
+
+#place img{
+  width: 60%;
+  height: 28rem;
+  margin: 5rem auto;
+}
+
+#place i{
+  font-size: 1.05rem;
+}
+
+li div {
+  line-height: 5.5rem;
+  width: 50%;
+  height: 6rem;
+  padding-left: 1%;
+  border: 5px double rgb(171,0,0);;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+img{
+  display: block;
+  margin: 0 auto;
+}
+
+select {
+  width: 100%;
+  min-width: 15ch;
+  max-width: 30ch;
+  border: 1px solid var(--select-border);
+  border-radius: 0.25em;
+  padding: 0.25em 0.5em;
+  font-size: 1.25rem;
+  cursor: pointer;
+  line-height: 1.1;
+  background-color: #fff;
+  background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
+  margin-bottom: 2rem;
+
+}
+
+
+
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
