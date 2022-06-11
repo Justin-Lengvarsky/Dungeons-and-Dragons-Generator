@@ -75,6 +75,7 @@ nav a:hover{
   nav a {
     font-size: 1.3rem;
     line-height: 3rem;
+    color: blue;
   }
   #place {
     width: 100% !important;
