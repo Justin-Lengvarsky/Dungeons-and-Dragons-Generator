@@ -78,9 +78,9 @@ nav a:hover{
   }
   select {
     width: 100%;
-    min-width: 15ch;
-    max-width: 40ch;
-    height: 3rem;
+    min-width: 15ch !important;
+    max-width: 40ch !important;
+    height: 8rem !important;
     padding: 0.25em 0.5em;
     font-size: 1.25rem;
   }
