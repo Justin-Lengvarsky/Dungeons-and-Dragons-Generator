@@ -76,6 +76,14 @@ nav a:hover{
   #place {
     width: 100% !important;
   }
+  select {
+    width: 100%;
+    min-width: 15ch;
+    max-width: 40ch;
+    height: 3rem;
+    padding: 0.25em 0.5em;
+    font-size: 1.25rem;
+  }
 }
 
 @media screen and (max-width: 430px){
@@ -168,7 +176,6 @@ select {
   background-color: #fff;
   background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
   margin-bottom: 2rem;
-
 }
 
 
