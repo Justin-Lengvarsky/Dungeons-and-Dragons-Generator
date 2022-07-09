@@ -1,26 +1,25 @@
+const url = `https://www.dnd5eapi.co/api/monsters/`
 
-  const url = `https://www.dnd5eapi.co/api/monsters/`
+fetch(url)
+.then(res => res.json()) // parse response as JSON
+.then(data => {
+  console.log(data)
 
-  fetch(url)
-  .then(res => res.json()) // parse response as JSON
-  .then(data => {
-   console.log(data)
+  // Goes through every element in the API Spells array and creates a new option in the Select bar 
+  const monsterSelect = document.querySelector('select');
 
-   const monsterSelect = document.querySelector('select');
-
-    for (let i=0; i<data.results.length; i++) {
-        let monsterOption = document.createElement("option")
-        monsterOption.textContent = data.results[i].name
-        monsterOption.value = data.results[i].index
-        monsterSelect.appendChild(monsterOption)
+  for (let i=0; i<data.results.length; i++) {
+      let monsterOption = document.createElement("option")
+      monsterOption.textContent = data.results[i].name
+      monsterOption.value = data.results[i].index
+      monsterSelect.appendChild(monsterOption)
     }
-      })
-      .catch(err => {
-          console.log(`error ${err}`)
-      });
+  })
+  .catch(err => {
+      console.log(`error ${err}`)
+  });
 
-
-
+// Once a monster is selected, the below fetches that item from the API database
 const monsterChoice = document.querySelector("select")
 monsterChoice.addEventListener("change", showMonster)
 
@@ -29,23 +28,19 @@ function showMonster() {
   fetch(monsterLink)
   .then(res => res.json()) // parse response as JSON
   .then(data => {
-   console.log(data)
-
-
-
+    // Shows the selected monster on the page
    let place = document.querySelector("#place")
    place.style.display = "block"
 
-   function removeAllChildNodes(parent) {
+    // Removes the current monster shown if user selects a different monster
+    function removeAllChildNodes(parent) {
     while (parent.firstChild) {
         parent.removeChild(parent.firstChild);
+      }
     }
-}
-
-removeAllChildNodes(place)
+    removeAllChildNodes(place)
    
-
-
+    // Shows all the data from that spell onto the page
     let monsterName = document.createElement("h1")
     monsterName.textContent = data.name;
     place.appendChild(monsterName)
@@ -76,9 +71,6 @@ removeAllChildNodes(place)
       place.appendChild(monsterActions)
       place.appendChild(monsterActionDesc)
     }
-
-
-
   })
   .catch(err => {
       console.log(`error ${err}`)
