@@ -33,7 +33,7 @@ function getFetch(){
 
     // Some classes have their abilities stored differently in the API, so this makes sure the selected class shows their data correctly
     if (!data.multi_classing.prerequisites) {
-        primaryAbility.textContent = `Primary Ability: ${data.multi_classing.prerequisite_options.from[0].ability_score.name}` 
+        primaryAbility.textContent = `Primary Ability: ${data.multi_classing.prerequisite_options.from.options[0].ability_score.name}` 
     } else {
         primaryAbility.textContent = `Primary Ability: ${data.multi_classing.prerequisites[0].ability_score.name}`;
     }
@@ -60,7 +60,8 @@ function getFetch(){
     switch (data.name) {
         case "Barbarian":
             pic = document.createElement("img");
-            pic.src = '/Users/justinlengvarsky/Desktop/Dungeons-and-Dragons-API/img/barbarian.png';
+            pic.src = 'img/barbarian.png';
+            
             place.appendChild(pic);
 
             quote = document.createElement("i");
@@ -70,7 +71,7 @@ function getFetch(){
 
         case "Bard":
             pic = document.createElement("img");
-            pic.src = '/Users/justinlengvarsky/Desktop/Dungeons-and-Dragons-API/img/bard.png';
+            pic.src = 'img/bard.png';
             place.appendChild(pic);
 
             quote = document.createElement("i");
@@ -80,7 +81,7 @@ function getFetch(){
 
         case "Cleric":
             pic = document.createElement("img")
-            pic.src = '/Users/justinlengvarsky/Desktop/Dungeons-and-Dragons-API/img/cleric.png';
+            pic.src = 'img/cleric.png';
             place.appendChild(pic)
 
             quote = document.createElement("i");
@@ -90,7 +91,7 @@ function getFetch(){
 
         case "Druid":
             pic = document.createElement("img")
-            pic.src = '/Users/justinlengvarsky/Desktop/Dungeons-and-Dragons-API/img/druid.png';
+            pic.src = 'img/druid.png';
             place.appendChild(pic)
 
             quote = document.createElement("i");
@@ -100,7 +101,7 @@ function getFetch(){
 
         case "Fighter":
             pic = document.createElement("img")
-            pic.src = '/Users/justinlengvarsky/Desktop/Dungeons-and-Dragons-API/img/fighter.png';
+            pic.src = 'img/fighter.png';
             place.appendChild(pic)
 
             quote = document.createElement("i");
@@ -110,7 +111,7 @@ function getFetch(){
 
         case "Monk":
             pic = document.createElement("img")
-            pic.src = '/Users/justinlengvarsky/Desktop/Dungeons-and-Dragons-API/img/monk.png';
+            pic.src = 'img/monk.png';
             place.appendChild(pic)
 
             quote = document.createElement("i");
@@ -120,7 +121,7 @@ function getFetch(){
 
         case "Paladin":
             pic = document.createElement("img")
-            pic.src = '/Users/justinlengvarsky/Desktop/Dungeons-and-Dragons-API/img/paladin.png';
+            pic.src = 'img/paladin.png';
             place.appendChild(pic)
 
             quote = document.createElement("i");
@@ -130,7 +131,7 @@ function getFetch(){
 
         case "Ranger":
             pic = document.createElement("img")
-            pic.src = '/Users/justinlengvarsky/Desktop/Dungeons-and-Dragons-API/img/ranger.png';
+            pic.src = 'img/ranger.png';
             place.appendChild(pic)
 
             quote = document.createElement("i");
@@ -140,7 +141,7 @@ function getFetch(){
 
         case "Rogue":
             pic = document.createElement("img")
-            pic.src = '/Users/justinlengvarsky/Desktop/Dungeons-and-Dragons-API/img/rogue.png';
+            pic.src = 'img/rogue.png';
             place.appendChild(pic)
 
             quote = document.createElement("i");
@@ -150,7 +151,7 @@ function getFetch(){
 
         case "Sorcerer":
             pic = document.createElement("img")
-            pic.src = '/Users/justinlengvarsky/Desktop/Dungeons-and-Dragons-API/img/sorcerer.png';
+            pic.src = 'img/sorcerer.png';
             place.appendChild(pic)
 
             quote = document.createElement("i");
@@ -160,7 +161,7 @@ function getFetch(){
 
         case "Warlock":
             pic = document.createElement("img")
-            pic.src = '/Users/justinlengvarsky/Desktop/Dungeons-and-Dragons-API/img/warlock.png';
+            pic.src = 'img/warlock.png';
             place.appendChild(pic)
 
             quote = document.createElement("i");
@@ -170,7 +171,7 @@ function getFetch(){
 
         case "Wizard":
             pic = document.createElement("img")
-            pic.src = '/Users/justinlengvarsky/Desktop/Dungeons-and-Dragons-API/img/wizard.png';
+            pic.src = 'img/wizard.png';
             place.appendChild(pic)
 
             quote = document.createElement("i");
