@@ -43,12 +43,14 @@ function getFetch(){
     const classSkillProficiencies = document.createElement("p")
     classSkillProficiencies.textContent = `Choose from `;
 
-    // Each class has a different amount of proficiencies, so this makes sure each class displays 
-    data.proficiency_choices[0].from.forEach(
-        item => item == data.proficiency_choices[0].from[data.proficiency_choices[0].from.length - 1] ? 
-        classSkillProficiencies.innerText += `and ${item.name.split(' ').filter(item => item != "Skill:").join(' ')}`
-        : classSkillProficiencies.innerText += `${item.name.split(' ').filter(item => item != "Skill:").join(' ')}, `
-    )
+    // Makes sure the each proficiency is presented as a list and the last item has 'and' at the beginning
+    for (let i=0; i<data.proficiency_choices[0].from.options.length; i++) {
+        if (i == data.proficiency_choices[0].from.options.length-1) {
+            classSkillProficiencies.innerText += `and ${data.proficiency_choices[0].from.options[i].item.name.split(' ').filter(item => item != "Skill:").join(' ')}`
+        } else {
+            classSkillProficiencies.innerText += `${data.proficiency_choices[0].from.options[i].item.name.split(' ').filter(item => item != "Skill:").join(' ')}, `
+        }
+    }
 
     place.appendChild(classSkillProficiencies)
 
