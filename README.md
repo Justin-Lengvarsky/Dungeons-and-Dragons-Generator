@@ -4,7 +4,9 @@ This application retrives data on several elements of Dungeons and Dragons 5th E
 
 **Link to project:** (https://dungeons-and-dragons-generator.netlify.app)
 
-![Image of App](https://res.cloudinary.com/duf8g2rbv/image/upload/v1652834835/Screen_Shot_2022-05-17_at_8.44.47_PM_pd6ayl.png)
+<a target="_blank" href="https://dungeons-and-dragons-generator.netlify.app">
+  <img src="https://user-images.githubusercontent.com/87950479/189777121-c3cadd9d-f6e1-49c5-9991-d0211064775b.gif" width="100%" alt="Dungeons and Dragons App"/>
+</a>
 
 ## How It's Made:
 
